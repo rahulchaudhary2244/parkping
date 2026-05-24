@@ -9,20 +9,16 @@ node_modules/
 # =========================
 .pnp
 .pnp.*
+.yarn/
 .pnpm-store/
 
-# Yarn internals
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
-
 # =========================
-# Testing / Coverage
+# Turbo / Cache
 # =========================
-coverage/
-**/coverage/
+.turbo/
+.cache/
+tmp/
+temp/
 
 # =========================
 # Next.js
@@ -33,44 +29,19 @@ out/
 **/out/
 
 # =========================
-# Turbo
-# =========================
-.turbo/
-
-# =========================
 # Build Output
 # =========================
 build/
-**/build/
 dist/
-**/dist/
+coverage/
+storybook-static/
+playwright-report/
 
 # =========================
-# Graphify
+# Graphify Outputs
 # =========================
 graphify-out/
-!graphify-out/graph.json             
 .graphify/
-
-
-# Keep optional exported visualizations if desired
-# !graphify-out/GRAPH_TREE.html
-# !graphify-out/graph.html
-
-# =========================
-# Logs
-# =========================
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-# =========================
-# Environment Files
-# =========================
-.env*
-!.env.example
 
 # =========================
 # Vercel
@@ -84,13 +55,48 @@ pnpm-debug.log*
 next-env.d.ts
 
 # =========================
-# IDE / OS
+# Environment Files
 # =========================
-.DS_Store
+.env*
+!.env.example
+
+# =========================
+# Git / IDE
+# =========================
+.git/
 .vscode/
 .idea/
 
 # =========================
+# Logs
+# =========================
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# =========================
+# Binary / Media Assets
+# =========================
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.svg
+*.ico
+*.mp4
+*.mov
+*.zip
+*.tar
+*.gz
+*.pdf
+
+# =========================
 # Misc
 # =========================
+.DS_Store
 *.pem
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

@@ -1,0 +1,25 @@
+{
+  "name": "@parkping/domain",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./alerts": "./src/alerts.ts",
+    "./mock-data": "./src/mock-data.ts",
+    "./qr": "./src/qr.ts",
+    "./vehicles": "./src/vehicles.ts"
+  },
+  "scripts": {
+    "build": "tsc --noEmit",
+    "clean": "rm -rf .turbo dist *.tsbuildinfo",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@parkping/typescript-config": "*",
+    "@types/node": "^20.0.0",
+    "eslint": "^9.0.0",
+    "typescript": "^5.0.0"
+  }
+}
