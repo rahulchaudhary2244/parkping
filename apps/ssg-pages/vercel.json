@@ -1,0 +1,5 @@
+{
+  "outputDirectory": "out",
+  "buildCommand": "cd ../.. && npm run build --filter=@parkping/ssg-pages...",
+  "installCommand": "npm install"
+}
