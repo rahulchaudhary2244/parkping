@@ -70,7 +70,10 @@ pnpm-debug.log*
 # Environment Files
 # =========================
 .env*
+!.env
 !.env.example
+.env.local
+.env.*.local
 
 # =========================
 # Vercel
