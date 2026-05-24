@@ -1,5 +1,4 @@
 {
-  "outputDirectory": "out",
-  "buildCommand": "cd ../.. && npm run build --filter=@parkping/ssg-pages...",
-  "installCommand": "npm install"
+  "buildCommand": "cd ../.. && npx turbo run build --filter=@parkping/ssg-pages...",
+  "installCommand": "cd ../.. && npm install"
 }
