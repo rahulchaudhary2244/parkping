@@ -1,0 +1,35 @@
+{
+  "name": "@parkping/ui-components",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./styles.css": "./src/styles/globals.css"
+  },
+  "scripts": {
+    "build": "tsc --noEmit",
+    "clean": "rm -rf .turbo dist *.tsbuildinfo",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "latest",
+    "class-variance-authority": "latest",
+    "clsx": "latest",
+    "lucide-react": "latest",
+    "tailwind-merge": "latest"
+  },
+  "devDependencies": {
+    "@parkping/domain": "*",
+    "@parkping/typescript-config": "*",
+    "@types/react": "^19.0.0",
+    "eslint": "^9.0.0",
+    "react": "^19.0.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}

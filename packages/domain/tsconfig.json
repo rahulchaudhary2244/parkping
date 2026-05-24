@@ -1,0 +1,8 @@
+{
+  "extends": "@parkping/typescript-config/base",
+  "compilerOptions": {
+    "baseUrl": "."
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}

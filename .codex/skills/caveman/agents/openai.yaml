@@ -1,0 +1,4 @@
+interface:
+  display_name: "Caveman"
+  short_description: "Write in a simple caveman voice"
+  default_prompt: "Use $caveman to rewrite this in a clear caveman voice."

@@ -2,25 +2,33 @@
   "name": "parkping",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "next": "16.2.6",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "build": "turbo build",
+    "clean": "turbo clean",
+    "dev": "turbo dev",
+    "dev:ssg": "npm --workspace @parkping/ssg-pages run dev",
+    "dev:ssr": "npm --workspace @parkping/ssr-pages run dev",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
+    "graphify:generate": "graphify extract . --backend gemini",
+    "graphify:update": "graphify update .",
+    "graphify:tree": "graphify tree --label 'ParkPing Architecture'",
+    "graphify:callflow": "graphify export callflow-html",
+    "graphify:watch": "graphify watch .",
+    "graphify:query": "graphify query",
+    "graphify:explain": "graphify explain",
+    "graphify:path": "graphify path"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.6",
-    "tailwindcss": "^4",
-    "typescript": "^5"
-  }
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "turbo": "latest",
+    "typescript-eslint": "latest",
+    "typescript": "^5.0.0"
+  },
+  "packageManager": "npm@9.10.0"
 }
